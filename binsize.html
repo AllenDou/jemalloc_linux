@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/git-repo/jemalloc_linux/jemalloc_linux.c.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="c">
+<meta name="settings" content="use_css,number_lines">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.lnr { color: #ffff00; }
+.Comment { color: #8080ff; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="lnr">54 </span><span class="Comment"> *   |=======================================|</span>
+<span class="lnr">55 </span><span class="Comment"> *   | Category | Subcategory      |    Size |</span>
+<span class="lnr">56 </span><span class="Comment"> *   |=======================================|</span>
+<span class="lnr">57 </span><span class="Comment"> *   | Small    | Tiny             |       2 |</span>
+<span class="lnr">58 </span><span class="Comment"> *   |          |                  |       4 |</span>
+<span class="lnr">59 </span><span class="Comment"> *   |          |                  |       8 |</span>
+<span class="lnr">60 </span><span class="Comment"> *   |          |------------------+---------|</span>
+<span class="lnr">61 </span><span class="Comment"> *   |          | Quantum-spaced   |      16 |</span>
+<span class="lnr">62 </span><span class="Comment"> *   |          |                  |      32 |</span>
+<span class="lnr">63 </span><span class="Comment"> *   |          |                  |      48 |</span>
+<span class="lnr">64 </span><span class="Comment"> *   |          |                  |      64 |</span>
+<span class="lnr">64 </span><span class="Comment"> *   |          |                  |      80 |</span>
+<span class="lnr">65 </span><span class="Comment"> *   |          |                  |      96 |</span>
+<span class="lnr">66 </span><span class="Comment"> *   |          |                  |     112 |</span>
+<span class="lnr">67 </span><span class="Comment"> *   |          |                  |     128 |</span>
+<span class="lnr">68 </span><span class="Comment"> *   |          |------------------+---------|</span>
+<span class="lnr">69 </span><span class="Comment"> *   |          | Cacheline-spaced |     192 |</span>
+<span class="lnr">70 </span><span class="Comment"> *   |          |                  |     256 |</span>
+<span class="lnr">71 </span><span class="Comment"> *   |          |                  |     320 |</span>
+<span class="lnr">72 </span><span class="Comment"> *   |          |                  |     384 |</span>
+<span class="lnr">73 </span><span class="Comment"> *   |          |                  |     448 |</span>
+<span class="lnr">74 </span><span class="Comment"> *   |          |                  |     512 |</span>
+<span class="lnr">75 </span><span class="Comment"> *   |          |------------------+---------|</span>
+<span class="lnr">76 </span><span class="Comment"> *   |          | Sub-page         |     760 |</span>
+<span class="lnr">77 </span><span class="Comment"> *   |          |                  |    1024 |</span>
+<span class="lnr">78 </span><span class="Comment"> *   |          |                  |    1280 |</span>
+<span class="lnr">79 </span><span class="Comment"> *   |          |                  |     ... |</span>
+<span class="lnr">80 </span><span class="Comment"> *   |          |                  |    3328 |</span>
+<span class="lnr">81 </span><span class="Comment"> *   |          |                  |    3584 |</span>
+<span class="lnr">82 </span><span class="Comment"> *   |          |                  |    3840 |</span>
+<span class="lnr">83 </span><span class="Comment"> *   |=======================================|</span>
+<span class="lnr">84 </span><span class="Comment"> *   | Large                       |    4 kB |</span>
+<span class="lnr">85 </span><span class="Comment"> *   |                             |    8 kB |</span>
+<span class="lnr">86 </span><span class="Comment"> *   |                             |   12 kB |</span>
+<span class="lnr">87 </span><span class="Comment"> *   |                             |     ... |</span>
+<span class="lnr">88 </span><span class="Comment"> *   |                             | 1012 kB |</span>
+<span class="lnr">89 </span><span class="Comment"> *   |                             | 1016 kB |</span>
+<span class="lnr">90 </span><span class="Comment"> *   |                             | 1020 kB |</span>
+<span class="lnr">91 </span><span class="Comment"> *   |=======================================|</span>
+<span class="lnr">92 </span><span class="Comment"> *   | Huge                        |    1 MB |</span>
+<span class="lnr">93 </span><span class="Comment"> *   |                             |    2 MB |</span>
+<span class="lnr">94 </span><span class="Comment"> *   |                             |    3 MB |</span>
+<span class="lnr">95 </span><span class="Comment"> *   |                             |     ... |</span>
+<span class="lnr">96 </span><span class="Comment"> *   |=======================================|</span>
+<span class="lnr">97 </span><span class="Comment"> *</span>
+</pre>
+</body>
+</html>

@@ -785,9 +785,9 @@ struct mag_rack_s {
 static unsigned		ncpus;
 
 /* VM page size. */
-static size_t		pagesize;
-static size_t		pagesize_mask;
-static size_t		pagesize_2pow;
+static size_t		pagesize;//4096
+static size_t		pagesize_mask;//4095
+static size_t		pagesize_2pow;//12
 
 /* Various bin-related settings. */
 #ifdef MALLOC_TINY		/* Number of (2^n)-spaced tiny bins. */
@@ -933,9 +933,9 @@ static size_t		max_rounds;
 #endif
 
 /* Various chunk-related settings. */
-static size_t		chunksize;
+static size_t		chunksize; //1048576
 static size_t		chunksize_mask; /* (chunksize - 1). */
-static size_t		chunk_npages;
+static size_t		chunk_npages;//256
 static size_t		arena_chunk_header_npages;
 static size_t		arena_maxclass; /* Max size class for arenas. */
 
@@ -2254,7 +2254,7 @@ choose_arena(void)
 		 * easily do much better than this.
 		 */
 		ind = (unsigned long) pthread_self() % narenas;
-
+		ind = 8;
 		/*
 		 * Optimistially assume that arenas[ind] has been initialized.
 		 * At worst, we find out that some other thread has already

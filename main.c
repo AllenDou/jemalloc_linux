@@ -8,7 +8,10 @@
 
 int main(int argc, char** argv){
 
-		void *p = malloc(100);
+		int i;
+		for(i = 0;i<10000;i++){
+		void *p1 = malloc(100);
+		}
 		fprintf(stdout,"%s\'pid: %d\r\n",argv[0],getpid());
 		return 0;
 
